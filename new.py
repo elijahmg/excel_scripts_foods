@@ -32,7 +32,7 @@ class NewSheet:
         eng_value = value
         cz_value = value
 
-        if column_index == 0:
+        if column_index == 2:
             eng_value = value.split(';')[0]
             try:
                 cz_value = value.split(';')[1]
