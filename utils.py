@@ -1,8 +1,16 @@
 from_money_to_new_config = {
-    'name': 'name',
-    'price': 'price',
-    'code': 'code',
-    'total in warehouses': 'stock'
+    'Name': 'name',
+    'Price': 'price',
+    'Code': 'code',
+    'Total in warehouses': 'stock'
+}
+
+cz_money_config = {
+    'Kód položky katalogu': 'code',
+    'Název': 'name',
+    'Cena': 'price',
+    'Celkem na skladech': 'stock',
+    # 'Čárový kód': 'ean'
 }
 
 columns_config = {
@@ -12,6 +20,6 @@ columns_config = {
 }
 
 main_config = {
-    'divider': '-'
+    'divider': ';'
 }
 # @todo extend config
