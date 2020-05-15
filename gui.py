@@ -15,9 +15,6 @@ class RunGUI(tk.Frame):
         self.create_widgets()
         self.pack()
 
-    def show_var(self):
-        print(self.v.get())
-
     def create_widgets(self):
         frame_money = tk.Frame(self, width=300, height=500)
         frame_eshop = tk.Frame(self, width=300, height=300)
