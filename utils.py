@@ -23,3 +23,4 @@ main_config = {
     'divider': ';'
 }
 # @todo extend config
+print('lop')
