@@ -108,6 +108,9 @@ def find_uniq_prod_from_money():
     new_book.save('C://Users//ww//Desktop//excel//eshp//v1//Codes wasnt found in eshop_v2c.xlsx')
 
 
+def test():
+    print('test')
+
 def filter_all_uniq():
     url_money = 'C://Users//ww//Desktop//excel//Artikl - 13.4.2020 (to use).xlsx'
     url_eshop = 'C://Users//ww//Desktop//excel//eshp//v1//New codes (hope so).xlsx'
