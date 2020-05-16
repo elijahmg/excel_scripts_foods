@@ -12,6 +12,8 @@ class RunGUI(tk.Frame):
         super().__init__(master)
         self.master = master
         self.v = tk.IntVar()
+        self.info_label_text = None
+        self.info_label = None
         self.create_widgets()
         self.pack()
 
@@ -41,18 +43,18 @@ class RunGUI(tk.Frame):
         run_script_button = tk.Button(bottom_frame, text='Create new sheet', command=self.run_script)
         run_script_button.pack(side=tk.RIGHT)
 
+        self.info_label_text = tk.StringVar()
+        self.info_label = tk.Label(self, textvariable=self.info_label_text).grid()
+
     def get_money_sheet_filename(self):
-        filename = filedialog.askopenfilename(initialdir='/', title='Select excel file from money',
+        filename = filedialog.askopenfilename(title='Select excel file from money',
                                               filetypes=(('Excel files', '*.xlsx'), ('all files', '*.*')))
         self.entry_money_text.set(filename.replace('/', '//'))
 
-    def get_eshop_sheet_filename(self):
-        filename = filedialog.askopenfilename(initialdir='/', title='Select excel file from money',
-                                              filetypes=(('Excel files', '*.xlsx'), ('all files', '*.*')))
-        self.entry_eshop_text.set(filename.replace('/', '//'))
-
     def run_script(self):
-        new_sheet = NewSheet(self.entry_money_text.get(), self.v.get())
-        new_sheet.create_new_sheet()
-        label = tk.Label(self, text='Files have been created')
-        label.grid()
+        try:
+            new_sheet = NewSheet(self.entry_money_text.get(), self.v.get())
+            new_sheet.create_new_sheet()
+            self.info_label_text.set('Files have been created')
+        except KeyError:
+            self.info_label_text.set('!!! NO CONFIG FILE !!!')

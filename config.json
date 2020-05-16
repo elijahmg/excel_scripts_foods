@@ -1,0 +1,24 @@
+{
+  "en": {
+    "Name": "name",
+    "Price": "price",
+    "Code": "code",
+    "Total in warehouses": "stock",
+    "Abbreviation 20 characters": "manufacturer"
+  },
+  "cz": {
+    "Kód položky katalogu": "code",
+    "Název": "name",
+    "Cena": "price",
+    "Celkem na skladech": "stock"
+  },
+  "columns_config": {
+    "code": 0,
+    "pairCode": 1,
+    "name": 2
+  },
+  "cz_brand_name_column": "",
+  "en_brand_name_column": "Abbreviation 20 characters",
+  "cz_config_cz_name_column": "",
+  "en_config_cz_name_column": "Extended description 3"
+}
